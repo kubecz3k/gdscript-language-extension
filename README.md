@@ -23,6 +23,22 @@ ClassUtils is a Godot Engine **singleton** designed to extend GDScript with feat
         # Your abstract function logic (if any default behavior is desired)
     ```
 
+
+# Promise Utility
+
+`Promise` is a helper class designed to simplify asynchronous workflows in GDScript.  
+It allows you to `await` operations and check results in a structured way.
+
+### Example Usage
+
+```gdscript
+var promise: Promise = async_compute_value()
+await promise.wait_for_fulfill()
+assert(promise.is_correct(), promise.get_error())
+var computed_value: float = promise.get_result() as float
+````
+
+
 ## Author
 
 Jakub Grzesik
